@@ -20,7 +20,7 @@ const App = ({getProducts}) => {
   }, [getProducts]);
 
   const handleChange = (event) => {
-    const filter = products.filter(product => product.name.includes(event.target.value))
+    const filter = products.filter(product => product.name.toLowerCase().includes(event.target.value.toLowerCase()))
     setFilteredProducts(filter)
   };
 
